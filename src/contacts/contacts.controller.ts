@@ -10,10 +10,11 @@ import {
 import { ContactService } from './contacts.service';
 import { AddContactDto } from './dtos/contact.dto';
 import { HttpCode, HttpStatus } from '@nestjs/common';
-import { ApiOkResponse, ApiOperation } from '@nestjs/swagger';
+import { ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { UpdateContactDto } from './dtos/update-contact.dto';
 
 @Controller('contacts')
+@ApiTags('Contacts')
 export class ContactController {
   constructor(private readonly contactService: ContactService) {}
 
